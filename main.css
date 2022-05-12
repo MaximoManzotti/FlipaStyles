@@ -5,6 +5,12 @@
     font-weight: normal;
 }
 
+:root {
+    --main-color: #f6007c;
+    --ligth-color: #fff;
+    --dark-color: rgb(0, 0, 0);
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,7 +22,7 @@
 .flipaDarkHover {
     font-family: Roboto-Regular;
     font-size: 3vw;
-    color: #fff;
+    color: var(--ligth-color);
 }
 
 .flipaDarkTextContainers {
@@ -26,7 +32,7 @@
 }
 
 .FlipaDarkSvg {
-    fill: #f6007c;
+    fill: var(--main-color);
     height: 3em;
     font-size: auto;
 }
@@ -38,7 +44,7 @@
 
 .flipaDarkTextContainers:hover .flipaDarkTexts a {
     text-decoration: none;
-    color: #fff;
+    color: var(--ligth-color);
 }
 
 .flipaDarkTextContainers {
@@ -65,7 +71,7 @@
     opacity: 0.5;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: var(--dark-color);
 }
 
 .flipaDarkTextContainers:hover .flipaDarkTexts {
@@ -79,7 +85,7 @@
 
 .flipaDarkTextContainers:hover .flipaDarkTexts a {
     text-decoration: none;
-    color: #fff;
+    color: var(--ligth-color);
 }
 
 .flipaDarkTexts {
@@ -91,7 +97,7 @@
 }
 
 .flipaDarkTextSections {
-    background-color: #f6007c;
+    background-color: var(--main-color);
     width: fit-content;
     padding: 0.3em 0.5em;
 }
@@ -104,7 +110,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: black;
+    background-color: var(--dark-color);
 }
 
 .flipaResponsiveNavImage {
@@ -119,7 +125,7 @@
 }
 
 #flipaResponsiveNavUl a {
-    color: #fff;
+    color: var(--ligth-color);
     padding: 1em;
 }
 
@@ -128,8 +134,8 @@
 }
 
 #flipaResponsiveNavUl a:hover {
-    background-color: #f6007c;
-    color: black;
+    background-color: var(--main-color);
+    color: var(--dark-color);
 }
 
 .flipaResponsiveNavDiv {
@@ -187,7 +193,7 @@
     backface-visibility: hidden;
     transform: rotateY(180deg);
     transition: 0.5s;
-    color: #ffffff;
+    color: var(--ligth-color);
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -204,13 +210,27 @@
 }
 
 .flipaFlipCardSvg svg {
-    fill: white;
+    fill: var(--ligth-color);
     padding: 0.3em;
 }
 
 .flipaFlipCardSvg:hover svg {
-    fill: black;
-    background-color: #fff;
+    fill: var(--dark-color);
+    background-color: var(--ligth-color);
+}
+
+.FlipaDropButton {
+    background-color: var(--main-color);
+    border-radius: 1em 0em 1em 1em;
+    padding: 1em;
+    color: var(--ligth-color);
+    border: none;
+    margin: 1em;
+}
+
+.FlipaDropButton:hover {
+    background-color: #000000;
+    color: var(--main-color);
 }
 
 @media (max-width: 768px) {
@@ -219,7 +239,7 @@
     }
     .flipaResponsiveNavSvg {
         display: block;
-        fill: #fff;
+        fill: var(--ligth-color);
         margin: 2em;
     }
     .flipaResponsiveDivSvgUl {
