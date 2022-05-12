@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../assets/Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto-Regular;
+    text-decoration: none;
+    list-style: none;
+}
+
+.flipaDarkHover {
+    font-family: Roboto-Regular;
+    font-size: 3vw;
+    color: #fff;
+}
+
+.flipaDarkTextContainers {
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.FlipaDarkSvg {
+    fill: #f6007c;
+    height: 3em;
+    font-size: auto;
+}
+
+.flipaDarkTextContainers:hover .flipaDarkTexts {
+    display: block;
+    position: relative;
+}
+
+.flipaDarkTextContainers:hover .flipaDarkTexts a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.flipaDarkTextContainers {
+    width: 100%;
+    height: 100%;
+}
+
+.flipaDarkContainer {
+    display: inline-block;
+    position: relative;
+}
+
+.flipaDarkContainer a {
+    text-decoration: none;
+}
+
+.flipaDarkContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.flipaDarkTextContainers:hover .flipaDarkTextsBackground {
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+.flipaDarkTextContainers:hover .flipaDarkTexts {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.flipaDarkTextContainers:hover .flipaDarkTexts a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.flipaDarkTexts {
+    display: none;
+}
+
+.flipaDarkContainer>div {
+    position: absolute;
+}
+
+.flipaDarkTextSections {
+    background-color: #f6007c;
+    width: fit-content;
+    padding: 0.3em 0.5em;
+}
+
+.flipaResponsiveHeader {
+    width: 100%;
+}
+
+.flipaResponsiveNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.flipaResponsiveNavImage {
+    margin: 1.5em 1em;
+    width: 33vw;
+    height: auto;
+    align-self: start;
+}
+
+#flipaResponsiveNavUl {
+    display: flex;
+}
+
+#flipaResponsiveNavUl a {
+    color: #fff;
+    padding: 1em;
+}
+
+#flipaResponsiveNavUl a li {
+    font-size: 2vh;
+}
+
+#flipaResponsiveNavUl a:hover {
+    background-color: #f6007c;
+    color: black;
+}
+
+.flipaResponsiveNavDiv {
+    position: relative;
+}
+
+.flipaResponsiveNavSvg {
+    display: none;
+}
+
+.flipaResponsiveDivSvgUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+
+.displayNone {
+    display: none !important;
+}
+
+.flipaFlipCard {
+    height: 50vh;
+    width: 50vw;
+    margin: 1em;
+    transform: translate(0%, 0%);
+}
+
+.flipaFlipCard:hover .flipaFlipCardFront {
+    transform: rotateY(-180deg);
+}
+
+.flipaFlipCard:hover .flipaFlipCardBack {
+    transform: rotateY(0deg);
+}
+
+.flipaFlipCardFront {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1652207168165-5339236afbbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-position: center;
+    background-size: cover;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    transition: 0.5s;
+}
+
+.flipaFlipCardBack {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.flipaFlipCardBackTexts h2 {
+    margin-bottom: 2vw;
+    font-size: 6vh;
+}
+
+.flipaFlipCardBackTexts p {
+    font-size: 3vh;
+}
+
+.flipaFlipCardSvg svg {
+    fill: white;
+    padding: 0.3em;
+}
+
+.flipaFlipCardSvg:hover svg {
+    fill: black;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .flipaResponsiveNavDiv {
+        position: relative;
+    }
+    .flipaResponsiveNavSvg {
+        display: block;
+        fill: #fff;
+        margin: 2em;
+    }
+    .flipaResponsiveDivSvgUl {
+        width: 6em;
+        align-self: auto;
+    }
+    #flipaResponsiveNavUl {
+        flex-direction: column;
+    }
+    #flipaResponsiveNavUl a {
+        padding: 1em;
+        width: 10vw;
+    }
+}
+
+@media (max-width: 650px) {
+    .flipaResponsiveNavSvg {
+        margin: 1em;
+    }
+}
